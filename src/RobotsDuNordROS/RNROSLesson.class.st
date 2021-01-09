@@ -20,6 +20,15 @@ RNROSLesson >> lesson [
 ]
 
 { #category : #accessing }
+RNROSLesson >> markdown: aFileName title: aTitle [
+
+	^ SaMarkdownContent new
+		  title: aTitle;
+		  content: (self filesystem / aFileName) readStream upToEnd;
+		  yourself
+]
+
+{ #category : #accessing }
 RNROSLesson >> objectives [
 
 	^ SaMarkdownContent new
