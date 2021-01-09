@@ -1,5 +1,5 @@
 Class {
 	#name : #RNROSServices,
 	#superclass : #RNROSLesson,
-	#category : #'RobotsDuNordROS-Day2'
+	#category : #'RobotsDuNordROS-Day4'
 }

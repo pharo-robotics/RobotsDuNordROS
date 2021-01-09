@@ -10,7 +10,8 @@ Class {
 { #category : #'as yet unclassified' }
 RNROSLesson >> filesystem [
 
-	^ 'pharo-local/iceberg/sbragagnolo/sagan/contents' asFileReference
+	^ SystemResolver defaultLocalDirectoryName asFileReference / #iceberg
+	  / #'pharo-robotics' / #RobotsDuNordROS / #contents
 ]
 
 { #category : #accessing }
