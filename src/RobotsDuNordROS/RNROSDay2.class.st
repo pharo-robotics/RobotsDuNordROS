@@ -11,8 +11,8 @@ RNROSDay2 >> course [
 		  title: 'ROS: Elemental Concepts';
 		  courseFolder: #RosElementalConcepts;
 		  addLesson: self introduction;
-		  addLesson: self nodes;
-		  addLesson: self topics;
+		  "addLesson: self nodes;
+		  addLesson: self topics;"
 		  yourself
 ]
 
