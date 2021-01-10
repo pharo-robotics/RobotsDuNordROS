@@ -120,9 +120,9 @@ RNROSIntroduction >> rosQuiz [
 { #category : #accessing }
 RNROSIntroduction >> turtleSim [
 
-	^ SaBashExperiment new
-		  description: 'Experimnttt';
-		  "(self filesystem / 'turtlesim.joystick.md') readStream upToEnd;"
+	^ SaROSLaunchExperiment new
+		  description:
+			  (self filesystem / 'turtlesim.draw.md') readStream upToEnd;
 		  title: 'TurtleSim Draw';
 		  command: (' roslaunch {1} ' format:
 					   { (self filesystem / 'turtlesim.draw.launch') fullName });
