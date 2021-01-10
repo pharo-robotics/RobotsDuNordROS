@@ -119,14 +119,14 @@ RNROSIntroduction >> rosQuiz [
 
 { #category : #accessing }
 RNROSIntroduction >> turtleSim [
+
 	^ SaBashExperiment new
-		description: 'Experimnttt';
-		"(self filesystem / 'turtlesim.joystick.md') readStream upToEnd;"
-			title: 'TurtleSim Joystick';
-		command:
-			(' roslaunch {1} '
-				format: (self filesystem / 'turtlesim.joystick.launch') fullName);
-		yourself
+		  description: 'Experimnttt';
+		  "(self filesystem / 'turtlesim.joystick.md') readStream upToEnd;"
+		  title: 'TurtleSim Joystick';
+		  command: (' roslaunch {1} ' format:
+					   { (self filesystem / 'turtlesim.joystick.launch') fullName });
+		  yourself
 ]
 
 { #category : #accessing }
