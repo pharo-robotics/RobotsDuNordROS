@@ -5,6 +5,44 @@ Class {
 }
 
 { #category : #accessing }
+RNROSIntroduction >> communityQuiz [
+
+	| questions |
+	questions := OrderedCollection new.
+	questions add: (SaMultipleChoiceQuestion new
+			 question: 'De q''on veut faire une question sur la configuration d''un artefact ROS on doit faire des questions en';
+			 choices: { 'answers.ros.org'.
+				 'stackoverflow.com'. 'facebook' };
+			 yourself).
+			
+			
+			questions add: (SaMultipleChoiceQuestion new
+			 question: 'De q''on a des questions sur des projets et conferences on fait les questions ou?';
+			 beMultiple;
+			 choices: { 'answers.ros.org'.
+				 'discourse.ros.org'. 'wiki.ros.org' };
+			 yourself).
+			
+	questions add: (SaMultipleChoiceQuestion new
+			 question: 'De qu''on trouve des problemes sur quelque morceau logiciel partie de ROS. On s''addresse ou? ';
+			 beMultiple;
+			 choices: { 'wiki.ros.org/Wiki'. 'depot git du projet en question' .
+				 'discourse.ros.org'. 'wiki.ros.org' };
+			 yourself).
+
+	
+	questions add: (SaOpenQuestion new
+			 question:
+				 'Q''est-ce que vous trouvez dans wiki.ros.org?';
+			 yourself).
+
+	^ SaQuestionaire new
+		  title: 'Quiz #2: La communaute ROS';
+		  questions: questions reverse;
+		  yourself
+]
+
+{ #category : #accessing }
 RNROSIntroduction >> filesystem [
 
 	^ super filesystem / #ROSIntroduction
@@ -19,6 +57,7 @@ RNROSIntroduction >> lesson [
 		addUnit: self rosIntroduction;
 		addUnit: self rosQuiz;
 		addUnit: self rosCommunaute;
+		addUnit: self communityQuiz;
 		addUnit: self turtleSim;
 		addUnit: self turtleSimQuiz;
 		addUnit: self summary;
@@ -79,9 +118,15 @@ RNROSIntroduction >> rosQuiz [
 ]
 
 { #category : #accessing }
-RNROSIntroduction >> turtleSim [ 
+RNROSIntroduction >> turtleSim [
 
-	^ self rosQuiz.
+	^ SaROSLaunchExperiment new
+		  description:
+			  (self filesystem / 'turtlesim.draw.md') readStream upToEnd;
+		  title: 'TurtleSim Draw';
+		  command: (' roslaunch {1} ' format:
+					   { (self filesystem / 'turtlesim.draw.launch') fullName });
+		  yourself
 ]
 
 { #category : #accessing }
@@ -108,7 +153,7 @@ RNROSIntroduction >> turtleSimQuiz [
 			 yourself).
 	questions add: (SaOpenQuestion new
 			 question:
-				 'Q''est-ce que vous pensez qu''est la relation entre l''ecran joystick et l''effet sur turtlesim?';
+				 'Q''est-ce que vous pensez qu''est la relation entre turtlesim, la tortue et le fait que la tortue se balade?';
 			 yourself).
 
 	^ SaQuestionaire new
