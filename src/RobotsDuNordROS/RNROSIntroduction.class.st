@@ -123,9 +123,9 @@ RNROSIntroduction >> turtleSim [
 	^ SaBashExperiment new
 		  description: 'Experimnttt';
 		  "(self filesystem / 'turtlesim.joystick.md') readStream upToEnd;"
-		  title: 'TurtleSim Joystick';
+		  title: 'TurtleSim Draw';
 		  command: (' roslaunch {1} ' format:
-					   { (self filesystem / 'turtlesim.joystick.launch') fullName });
+					   { (self filesystem / 'turtlesim.draw.launch') fullName });
 		  yourself
 ]
 
@@ -153,7 +153,7 @@ RNROSIntroduction >> turtleSimQuiz [
 			 yourself).
 	questions add: (SaOpenQuestion new
 			 question:
-				 'Q''est-ce que vous pensez qu''est la relation entre l''ecran joystick et l''effet sur turtlesim?';
+				 'Q''est-ce que vous pensez qu''est la relation entre turtlesim, la tortue et le fait que la tortue se balade?';
 			 yourself).
 
 	^ SaQuestionaire new
