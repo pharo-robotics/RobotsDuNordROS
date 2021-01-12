@@ -16,8 +16,8 @@ RNROSDay2 >> course [
 		courseFolder: #RosElementalConcepts;
 		addLesson: self introduction id: #Introduction;
 		addLesson: self nodes id: #Nodes;
-		"addLesson: self topics;"
-			yourself
+		addLesson: self topics;
+		yourself
 ]
 
 { #category : #'as yet unclassified' }
