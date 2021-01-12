@@ -18,14 +18,14 @@ RNROSDay1 >> bash [
 
 { #category : #'as yet unclassified' }
 RNROSDay1 >> course [
-
 	^ SaCourse new
-		  courseFolder: #Environment;
-		  title: 'Environment';
-		  addLesson: self test;
-		  addLesson: self linux;
-		  addLesson: self bash;
-		  addLesson: self git
+		id: #Environment;
+		courseFolder: #Environment;
+		title: 'Environment';
+		addLesson: self test id: #EntryTest;
+		addLesson: self linux id: #Linux;
+		addLesson: self bash id: #Bash;
+		addLesson: self git id: #Git
 ]
 
 { #category : #'command line' }

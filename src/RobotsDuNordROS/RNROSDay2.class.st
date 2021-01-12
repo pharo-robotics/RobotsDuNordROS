@@ -10,12 +10,13 @@ RNROSDay2 >> course [
 		ifFalse: [ ^ self
 				error:
 					'The lesson of ROS: Elemental Concepts requires to be done in linux! Pleasem load Sagan in your Ubuntu/ROS installation, and catch from there' ]."
+
 	^ SaCourse new
 		title: 'ROS: Elemental Concepts';
 		courseFolder: #RosElementalConcepts;
-		addLesson: self introduction;
-		addLesson: self nodes;
-		  "addLesson: self topics;"
+		addLesson: self introduction id: #Introduction;
+		addLesson: self nodes id: #Nodes;
+		"addLesson: self topics;"
 			yourself
 ]
 

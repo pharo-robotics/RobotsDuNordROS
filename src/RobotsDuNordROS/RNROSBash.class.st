@@ -9,7 +9,7 @@ Class {
 
 { #category : #'as yet unclassified' }
 RNROSBash >> bashExercises [
-	^ SaMarkdownContent new
+	^ (SaMarkdownContent id: #BashExercises)
 		  title: 'Exercises';
 		  content: (self filesystem / 'exercises.md') readStream upToEnd;
 		  yourself
@@ -17,10 +17,10 @@ RNROSBash >> bashExercises [
 
 { #category : #'as yet unclassified' }
 RNROSBash >> bashHistory [
-	^ SaMarkdownContent new
-		  title: 'Bash';
-		  content: (self filesystem / 'bash.md') readStream upToEnd;
-		  yourself
+	^ (SaMarkdownContent new id: #BashHistory)
+		title: 'Bash';
+		content: (self filesystem / 'bash.md') readStream upToEnd;
+		yourself
 ]
 
 { #category : #'as yet unclassified' }
@@ -29,33 +29,33 @@ RNROSBash >> bashQuiz [
 	questions := OrderedCollection new.
 	questions
 		add:
-			(SaMultipleChoiceQuestion new
+			((SaMultipleChoiceQuestion id: #QuizQQSBashQ1)
 				question: 'Qu''est-ce que ca veut dire Bash';
 				choices:
 					{'Bourne-Again shell' . 'Larry J. Bash' . 'Jeu vidéo de type party game développé par Eurocom '};
 				yourself).
 	questions
 		add:
-			(SaMultipleChoiceQuestion new
+			((SaMultipleChoiceQuestion id: #QuizQQSBashQ2)
 				question:
 					'Quelle est le fichier que s''execute lors du lancement de bash, pour tou.te.s les utilisateurs lors d''une ouverture de session? ';
 				choices: {'/etc/profile' . '.bash_profile' . '.bash_login' . '.bashrc'};
 				yourself).
 	questions
 		add:
-			(SaMultipleChoiceQuestion new
+			((SaMultipleChoiceQuestion id: #QuizQQSBashQ3)
 				question:
 					'Quelle est le fichier que s''execute lors du lancement de bash, de ce lancement n''est pas lie a une ouverture de session? ';
 				choices: {'/etc/profile' . '.bash_profile' . '.bash_login' . '.bashrc'};
 				yourself).
 	questions
 		add:
-			(SaMultipleChoiceQuestion new
+			((SaMultipleChoiceQuestion id: #QuizQQSBashQ4)
 				question: 'Le fichier .bashrc est';
 				choices:
 					{'Specifique a chaque utilisateur' . 'Commun a tou.te.s les utilisateurs'};
 				yourself).
-	^ SaQuestionaire new
+	^ (SaQuestionaire id: #QuizQQSBash)
 		title: 'Quiz #2: Bash';
 		questions: questions reverse;
 		yourself
@@ -63,7 +63,7 @@ RNROSBash >> bashQuiz [
 
 { #category : #'as yet unclassified' }
 RNROSBash >> bashTutorial [
-	^ SaLocalMediaContent new
+	^ (SaLocalMediaContent id: #BashTutorial)
 		title: 'Bash Tutorial';
 		file: self filesystem / 'bash-tutorial.mp4';
 		url: 'http://rmod-files.lille.inria.fr/Teach/environment/bash.mp4';
@@ -92,7 +92,7 @@ RNROSBash >> lesson [
 
 { #category : #'as yet unclassified' }
 RNROSBash >> whatIsBash [
-	^ SaMultipleChoiceQuestion new
+	^ (SaMultipleChoiceQuestion id: #WhatIsBash)
 		title: 'Quiz #1: Bash';
 		question: 'Qu''est-ce que ce Bash? ';
 		beMultiple;

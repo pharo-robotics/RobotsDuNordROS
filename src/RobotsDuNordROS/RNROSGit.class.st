@@ -14,7 +14,7 @@ RNROSGit >> filesystem [
 
 { #category : #'as yet unclassified' }
 RNROSGit >> gitExercises [
-	^ SaMarkdownContent new
+	^ (SaMarkdownContent id: #GitExercises)
 		  title: 'Exercises';
 		  content: (self filesystem / 'exercises.md') readStream upToEnd;
 		  yourself
@@ -22,7 +22,7 @@ RNROSGit >> gitExercises [
 
 { #category : #'as yet unclassified' }
 RNROSGit >> gitHistory [
-	^ SaMarkdownContent new
+	^ (SaMarkdownContent id: #GitHistory)
 		  title: 'Git';
 		  content: (self filesystem / 'git.md') readStream upToEnd;
 		  yourself
@@ -34,19 +34,19 @@ RNROSGit >> gitQuiz [
 	questions := OrderedCollection new.
 	questions
 		add:
-			(SaMultipleChoiceQuestion new
+			((SaMultipleChoiceQuestion id: #QuizQQGitQ1)
 				question: 'Quelle est la license de Git';
 				choices: {'GPLv1' . 'GPLv2' . 'GPLv3' . 'MIT'};
 				yourself).
 	questions
 		add:
-			(SaMultipleChoiceQuestion new
+			((SaMultipleChoiceQuestion id: #QuizQQGitQ2)
 				question: 'Le createur de Git est aussi le createur de ';
 				choices: {'Linux kernel' . 'Ubuntu' . 'Windows' . 'GNU/Linux'};
 				yourself).
 	questions
 		add:
-			(SaMultipleChoiceQuestion new
+			((SaMultipleChoiceQuestion id: #QuizQQGitQ3)
 				question: 'Qu''est-ce que ce un Logiciel de gestion de versions?';
 				choices:
 					{'Un logiciel qui permet de stocker un ensemble de fichiers en conservant la chronologie de toutes les modifications qui ont été effectuées dessus'.
@@ -54,10 +54,10 @@ RNROSGit >> gitQuiz [
 				yourself).
 	questions
 		add:
-			(SaOpenQuestion new
+			((SaOpenQuestion id: #QuizQQGitQ4)
 				question: 'Expliquez avec vous mot qu''est-ce que vous attendez de Git';
 				yourself).
-	^ SaQuestionaire new
+	^ (SaQuestionaire id: #QuizQQGit)
 		title: 'Quiz #2: Git';
 		questions: questions reverse;
 		yourself
@@ -65,7 +65,7 @@ RNROSGit >> gitQuiz [
 
 { #category : #'as yet unclassified' }
 RNROSGit >> gitTutorial [
-	^ SaLocalMediaContent new
+	^ (SaLocalMediaContent id: #GitTutorial)
 		title: 'Git Tutorial';
 		file: self filesystem / 'git-tutorial.mp4';
 		overview: self filesystem / 'git-tutorial.md';
@@ -89,7 +89,7 @@ RNROSGit >> lesson [
 
 { #category : #'as yet unclassified' }
 RNROSGit >> whatIsGit [
-	^ SaMultipleChoiceQuestion new
+	^ (SaMultipleChoiceQuestion id: #WhatIsGit)
 		title: 'Quiz #1: Git';
 		question: 'Qu''est-ce que ce Git? ';
 		beMultiple;

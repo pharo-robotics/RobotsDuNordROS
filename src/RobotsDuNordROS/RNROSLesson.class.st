@@ -29,9 +29,18 @@ RNROSLesson >> markdown: aFileName title: aTitle [
 ]
 
 { #category : #accessing }
+RNROSLesson >> markdown: aFileName title: aTitle id: anId [ 
+
+	^ (SaMarkdownContent id: anId)
+		  title: aTitle;
+		  content: (self filesystem / aFileName) readStream upToEnd;
+		  yourself
+]
+
+{ #category : #accessing }
 RNROSLesson >> objectives [
 
-	^ SaMarkdownContent new
+	^ (SaMarkdownContent id:#___Objectives)
 		  title: 'Objectives';
 		  content: (self filesystem / 'objectives.md') readStream upToEnd;
 		  yourself
@@ -39,7 +48,7 @@ RNROSLesson >> objectives [
 
 { #category : #accessing }
 RNROSLesson >> summary [
-	^ SaLessonSummary new
+	^ (SaLessonSummary id: #__Summary)
 		title: 'Summary';
 		content: (self filesystem / 'summary.md') readStream upToEnd;
 		yourself
