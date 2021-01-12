@@ -32,34 +32,34 @@ RNROSNodes >> nodesCommandsQuiz [
 		add:
 			((SaMultipleChoiceQuestion id: #NodesCommandsQ1)
 				question:
-					'De q''on veut faire une question sur la configuration d''un artefact ROS on doit faire des questions en';
-				choices: {'answers.ros.org' . 'stackoverflow.com' . 'facebook'};
+					'"ps -fea | grep ros" montre tout les processus que';
+				choices: {'appartien a ROS' . 'contien le mot "ros"' . 'que sont demarre par l''utilisateur ros'};
 				yourself).
 	questions
 		add:
 			((SaMultipleChoiceQuestion id: #NodesCommandsQ2)
 				question:
-					'De q''on a des questions sur des projets et conferences on fait les questions ou?';
+					'La commande rosnode list, en relation a "ps -fea | grep ros": il montre ';
 				beMultiple;
-				choices: {'answers.ros.org' . 'discourse.ros.org' . 'wiki.ros.org'};
+				choices: {'moins des processus' . 'plus de processus' . 'la meme quantité'};
 				yourself).
 	questions
 		add:
 			((SaMultipleChoiceQuestion id: #NodesCommandsQ3)
 				question:
-					'De qu''on trouve des problemes sur quelque morceau logiciel partie de ROS. On s''addresse ou? ';
+					'La commande rosnode info <nom-node> montre';
 				beMultiple;
 				choices:
-					{'wiki.ros.org/Wiki' . 'depot git du projet en question'.
-					'discourse.ros.org' . 'wiki.ros.org'};
+					{'Les connections du node' . 'le PID du node'.
+					'L''addresse HTTP pour s''y connecter avec' . 'Le nom du developeur'};
 				yourself).
 	questions
 		add:
 			((SaOpenQuestion id: #NodesCommandsQ4)
-				question: 'Q''est-ce que vous trouvez dans wiki.ros.org?';
+				question: 'Donnez vous une definition de Node avec vos mot, en pas plus de 3 lignes';
 				yourself).
 	^ (SaQuestionaire id: #NodesCommands)
-		title: 'Quiz #2: La communaute ROS';
+		title: 'Quiz #2: En étudions les nodes ';
 		questions: questions reverse;
 		yourself
 ]
@@ -77,34 +77,42 @@ RNROSNodes >> nodesQuiz [
 		add:
 			((SaMultipleChoiceQuestion id: #NodesQuizQ1)
 				question:
-					'De q''on veut faire une question sur la configuration d''un artefact ROS on doit faire des questions en';
-				choices: {'answers.ros.org' . 'stackoverflow.com' . 'facebook'};
+					'Pour quoi vous pensez qu''on fait une analogie avec les graph/reseaux?';
+				choices:
+					{'Les nodes sont les sommet du graph, leur communication les arcs'.
+					'Les arcs sont des nodes, les sommets sont des machines'.
+					'les nodes sont les les sommets, les arcs sont les relations de dependece'};
 				yourself).
 	questions
 		add:
 			((SaMultipleChoiceQuestion id: #NodesQuizQ2)
-				question:
-					'De q''on a des questions sur des projets et conferences on fait les questions ou?';
+				question: 'Un systeme distribue est un ';
 				beMultiple;
-				choices: {'answers.ros.org' . 'discourse.ros.org' . 'wiki.ros.org'};
+				choices:
+					{'systeme a multiple processus' . 'systeme a multiples ordinateurs'.
+					'de processus interconnecté'};
 				yourself).
 	questions
 		add:
 			((SaMultipleChoiceQuestion id: #NodesQuizQ3)
 				question:
-					'De qu''on trouve des problemes sur quelque morceau logiciel partie de ROS. On s''addresse ou? ';
+					'On reconnait plusieur characteristiques de ROS tant systeme distribue';
 				beMultiple;
 				choices:
-					{'wiki.ros.org/Wiki' . 'depot git du projet en question'.
-					'discourse.ros.org' . 'wiki.ros.org'};
+					{'Interface unifié de communication' . 'Une architecture hardware unifiée '.
+					'Flexibilité pour trouver des resources'.
+					'Flexibilité pour ajotuer et enlever des fonctionalités'.
+					'Un seule langage de development'};
 				yourself).
 	questions
 		add:
-			((SaOpenQuestion id: #NodesQuizQ4)
-				question: 'Q''est-ce que vous trouvez dans wiki.ros.org?';
+			((SaMultipleChoiceQuestion id: #NodesQuizQ4)
+				question: 'Un node se communique avec des autres nodes avec les protocols';
+				beMultiple;
+				choices: {'XMLRPC' . 'TCPROS5' . 'UDP/IP' . 'RTP'};
 				yourself).
 	^ (SaQuestionaire id: #NodesQuiz)
-		title: 'Quiz #2: La communaute ROS';
+		title: 'Quiz #1: Le Node ROS ';
 		questions: questions reverse;
 		yourself
 ]
