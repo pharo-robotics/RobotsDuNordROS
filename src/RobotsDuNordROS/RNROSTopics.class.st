@@ -62,8 +62,23 @@ RNROSTopics >> topicQuiz [
 				beMultiple;
 				choices: {'Unidirectionel' . 'Bidirectionel ' . 'Configurable'};
 				yourself).
+	questions
+		add:
+			((SaMultipleChoiceQuestion id: #TopicsQuizQ5)
+				question: 'Combien publishers peu avoir un topic?';
+				beMultiple;
+				choices: {'Que 1' . '0 ' . 'Plusieurs'};
+				yourself).
+				
+		questions
+		add:
+			((SaMultipleChoiceQuestion id: #TopicsQuizQ6)
+				question: 'Combien subscriptors peu avoir un topic?';
+				beMultiple;
+				choices: {'Que 1' . '0 ' . 'Plusieurs'};
+				yourself).
 	^ (SaQuestionaire id: #TopicsQuiz)
-		title: 'Quiz #1: Le Topic ROS ';
+		title: 'Quiz #2: Le Topic ROS ';
 		questions: questions reverse;
 		yourself
 ]
@@ -79,7 +94,7 @@ RNROSTopics >> turtleSimManualPublishToTopicExperiment [
 		description:
 			(self filesystem / 'turtleSimManualPublishToTopicExperiment.md')
 				readStream upToEnd;
-		title: 'TurtleSim Draw';
+		title: 'TurtleSim Publish';
 		command:
 			(' roslaunch {1} '
 				format: {(self filesystem / 'turtlesim.launch') fullName});
@@ -104,39 +119,22 @@ RNROSTopics >> turtleSimManualPublishToTopicExperimentQuiz [
 		add:
 			((SaMultipleChoiceQuestion id: #TopicsExpPubQuizQ2)
 				question: 'rostopic pub /turtle1/cmd_vel geometry_msgs/Twist "linear:
-  x: 0.0
-  y: 0.0
-  z: 0.0
+  x: 1.0
+  y: 2.0
+  z: 3.0
 angular:
-  x: 0.0
-  y: 0.0
-  z: 0.0" -1';
+  x: 3.0
+  y: 2.0
+  z: 1.0" -1';
 				beMultiple;
 				choices:
-					{'systeme a multiple processus' . 'systeme a multiples ordinateurs'.
-					'de processus interconnecté'};
+					{'Transmet comme message un tuple des vecteurs de vitesse ((1,2,3), (3,2,1)) ' .
+					 'Transmet le message a travers le topic /turtle1/cmd_vel'.
+					 'Le seul possible recepteur du message est TurtleSim'};
 				yourself).
-	questions
-		add:
-			((SaMultipleChoiceQuestion id: #TopicsExpPubQuizQ3)
-				question:
-					'On reconnait plusieur characteristiques de ROS tant systeme distribue';
-				beMultiple;
-				choices:
-					{'Interface unifié de communication' . 'Une architecture hardware unifiée '.
-					'Flexibilité pour trouver des resources'.
-					'Flexibilité pour ajotuer et enlever des fonctionalités'.
-					'Un seule langage de development'};
-				yourself).
-	questions
-		add:
-			((SaMultipleChoiceQuestion id: #TopicsExpPubQuizQ4)
-				question: 'Un node se communique avec des autres nodes avec les protocols';
-				beMultiple;
-				choices: {'XMLRPC' . 'TCPROS5' . 'UDP/IP' . 'RTP'};
-				yourself).
+	
 	^ (SaQuestionaire id: #TopicsExpPubQuiz)
-		title: 'Quiz #1: Le Node ROS ';
+		title: 'Quiz #4: Le Topic Publisher ';
 		questions: questions reverse;
 		yourself
 ]
@@ -147,7 +145,7 @@ RNROSTopics >> turtleSimManualSubscribeToTopicExperiment [
 		description:
 			(self filesystem / 'turtleSimManualSubscribeToTopicExperiment.md')
 				readStream upToEnd;
-		title: 'TurtleSim Draw';
+		title: 'TurtleSim Subscribe';
 		command:
 			(' roslaunch {1} '
 				format: {(self filesystem / 'turtlesim.launch') fullName});
@@ -161,43 +159,41 @@ RNROSTopics >> turtleSimManualSubscribeToTopicExperimentQuiz [
 	questions
 		add:
 			((SaMultipleChoiceQuestion id: #TopicsExpSubQuizQ1)
-				question:
-					'Pour quoi vous pensez qu''on fait une analogie avec les graph/reseaux?';
+				question: 'Le type exposeé par rostopic type /turtle1/pose represent';
 				choices:
-					{'Les nodes sont les sommet du graph, leur communication les arcs'.
-					'Les arcs sont des nodes, les sommets sont des machines'.
-					'les nodes sont les les sommets, les arcs sont les relations de dependece'};
+					{'Des coordonnees 3D, avec rotation' . 'Des coordonnees 2D avec rotation'.
+					'Des coordonnees 3D, avec rotation. Vitesse lineer et angulaire d''une dimension'.
+					'Des coordonnees 2D, avec rotation. Vitesse lineer et angulaire d''une dimension'};
 				yourself).
 	questions
 		add:
 			((SaMultipleChoiceQuestion id: #TopicsExpSubQuizQ2)
-				question: 'Un systeme distribue est un ';
-				beMultiple;
+				question:
+					'Lors de l''experiment (E), on a vu comment la pose du tortue change en rapport a la publication sur le topic cmd_vel. ';
 				choices:
-					{'systeme a multiple processus' . 'systeme a multiples ordinateurs'.
-					'de processus interconnecté'};
+					{'La tortue se deplace et informe sa localization au meme temps.'.
+					'Le topic pose est generé a partir d''un calcul simple et direct de la commande pose'};
 				yourself).
 	questions
 		add:
 			((SaMultipleChoiceQuestion id: #TopicsExpSubQuizQ3)
 				question:
-					'On reconnait plusieur characteristiques de ROS tant systeme distribue';
-				beMultiple;
+					'Lors du mouvement et communication de la tortue. Le calcule du comportement de la tortue se passe ou? ';
 				choices:
-					{'Interface unifié de communication' . 'Une architecture hardware unifiée '.
-					'Flexibilité pour trouver des resources'.
-					'Flexibilité pour ajotuer et enlever des fonctionalités'.
-					'Un seule langage de development'};
+					{'Dans le node' . 'Dans le topic' . 'Dans le message transmet travers le topic'};
 				yourself).
 	questions
 		add:
 			((SaMultipleChoiceQuestion id: #TopicsExpSubQuizQ4)
-				question: 'Un node se communique avec des autres nodes avec les protocols';
-				beMultiple;
-				choices: {'XMLRPC' . 'TCPROS5' . 'UDP/IP' . 'RTP'};
+				question:
+					'Lors du mouvement et communication de la tortue. Le comportement de la tortue est ';
+				choices:
+					{'Une reaction au message transmet travers le topic'.
+					'Le node est developpé pour se deplacer sans besoin de interaction'.
+					'Autre'};
 				yourself).
 	^ (SaQuestionaire id: #TopicsExpSubQuiz)
-		title: 'Quiz #1: Le Node ROS ';
+		title: 'Quiz #5: Le Topic Subscriber';
 		questions: questions reverse;
 		yourself
 ]
@@ -206,7 +202,7 @@ RNROSTopics >> turtleSimManualSubscribeToTopicExperimentQuiz [
 RNROSTopics >> turtleSimTopicExperiment [
 	^ (SaROSLaunchExperiment id: #TurtleSimExperiment)
 		description: (self filesystem / 'turtleSimTopicExperiment.md') readStream upToEnd;
-		title: 'TurtleSim Draw';
+		title: 'TurtleSim Topic Experiment';
 		command:
 			(' roslaunch {1} '
 				format: {(self filesystem / 'turtlesim.draw.launch') fullName});
@@ -233,7 +229,7 @@ RNROSTopics >> turtleSimTopicExperimentQuiz [
 					{'Le type' . 'Le nom de topic' . 'Les publishers' . 'Les subscribers'};
 				yourself).
 	^ (SaQuestionaire id: #TopicsExpQuiz)
-		title: 'Quiz #1: Le Node ROS ';
+		title: 'Quiz #3: Topic analysis ';
 		questions: questions reverse;
 		yourself
 ]
