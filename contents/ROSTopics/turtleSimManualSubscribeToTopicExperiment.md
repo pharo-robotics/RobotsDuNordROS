@@ -12,7 +12,7 @@ Une fois la tortue commence a faire son desin, addressez vous sur une terminale 
 (A)====================================================================
 Executez la suivante commande:
 ```
-$ rostopic type /turtle1/cmd_vel
+$ rostopic type /turtle1/pose
 ```
 1- Qu'est'ce que ce le type de ce topic? 
 
