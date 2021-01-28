@@ -1,3 +1,6 @@
+"
+Intro on basic concepts 
+"
 Class {
 	#name : #RNROSDay2,
 	#superclass : #RNROSCourse,
