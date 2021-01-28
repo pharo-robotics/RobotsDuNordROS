@@ -20,9 +20,14 @@ RNROSCourse class >> courseDay2 [
 ]
 
 { #category : #'as yet unclassified' }
-RNROSCourse class >> courses [
+RNROSCourse class >> courseDay3 [
 
-	^ { 
-		  (#'Jour 1' -> [ self courseDay1 ]).
-		  (#'Jour 2' -> [ self courseDay2 ]) } asDictionary
+	^ RNROSDay2 new course
+]
+
+{ #category : #'as yet unclassified' }
+RNROSCourse class >> courses [
+	^ {(#'Jour 1' -> [ self courseDay1 ]).
+	(#'Jour 2' -> [ self courseDay2 ]).
+	(#'Jour 3' -> [ self courseDay3 ])} asDictionary
 ]
