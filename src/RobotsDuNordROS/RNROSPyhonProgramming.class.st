@@ -1,7 +1,7 @@
 Class {
 	#name : #RNROSPyhonProgramming,
 	#superclass : #RNROSLesson,
-	#category : #'RobotsDuNordROS-Day2'
+	#category : #'RobotsDuNordROS-Day3'
 }
 
 { #category : #'as yet unclassified' }

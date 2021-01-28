@@ -22,7 +22,7 @@ RNROSCourse class >> courseDay2 [
 { #category : #'as yet unclassified' }
 RNROSCourse class >> courseDay3 [
 
-	^ RNROSDay2 new course
+	^ RNROSDay3 new course
 ]
 
 { #category : #'as yet unclassified' }

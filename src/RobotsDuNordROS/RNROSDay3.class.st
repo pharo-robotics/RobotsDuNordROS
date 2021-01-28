@@ -17,7 +17,7 @@ RNROSDay3 >> course [
 
 { #category : #'as yet unclassified' }
 RNROSDay3 >> python [
-	
+	^ RNROSPyhonProgramming new lesson
 ]
 
 { #category : #'as yet unclassified' }
