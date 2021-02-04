@@ -1,4 +1,4 @@
-![Slam](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanswers.ros.org%2Fupfiles%2F1339198636377568.png|caption="Slam")
+![Slam](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanswers.ros.org%2Fupfiles%2F1339198636377568.png|size=400&caption="Slam")
 
 
 En géométrie numérique et en robotique, la localisation et la cartographie simultanées (SLAM) est le problème de calcul consistant à construire ou à mettre à jour une carte d'un environnement inconnu tout en gardant une trace de l'emplacement d'un agent dans cet environnement. Bien que ce problème semble être au départ un problème de poule et d'œuf, il existe plusieurs algorithmes connus pour le résoudre, au moins approximativement, en un temps traitable pour certains environnements. Les méthodes de solution approximative les plus courantes sont le filtre particulaire, le filtre de Kalman étendu, l'intersection de covariance et GraphSLAM. Les algorithmes SLAM sont utilisés dans la navigation, la cartographie robotique. 
