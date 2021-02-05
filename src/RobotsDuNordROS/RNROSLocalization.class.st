@@ -105,14 +105,7 @@ RNROSLocalization >> quiz [
 			((SaOpenQuestion id: #AMCLQuizQ3)
 				question: 'Quel processus sont executée dans le NUC?';
 				yourself).
-	questions
-		add:
-			((SaOpenQuestion id: #AMCLQuizQ4)
-				question:
-					'Addressez vous a une terminale. execute la commande roscd turtlebot3_slam .
-					Cherche le fichier turtlebot3_navigation.launch. 
-					Ecrivez une description du fichier. Assurez vous de suivre tout fichier ".launch" utilisé par turtlebot3_navigation.launch. 						';
-				yourself).
+	
 	^ (SaQuestionaire id: #AMCLQuiz)
 		title: 'Quiz #3: AMCL ';
 		questions: questions shuffle;

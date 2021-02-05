@@ -59,7 +59,7 @@ RNROSSlam >> quiz [
 			questions
 		add:
 			((SaOpenQuestion id: #GMQuizQ4)
-				question: 'Addressez vous a une terminale. execute la commande roscd turtlebot3_slam . 
+				question: 'Addressez vous a une terminale. execute la commande roscd turtlebot3_slam. 
 				Cherche le fichier turtlebot3_slam.launch. 
 				Ecrivez une description du fichier. Assurez vous de suivre tout fichier ".launch" utilisé par turtlebot3_slam.launch. 		
 				';
