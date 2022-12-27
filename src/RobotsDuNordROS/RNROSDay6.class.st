@@ -13,3 +13,9 @@ RNROSDay6 >> course [
 		  addLesson: self explorationTpLesson id: #ExplorationTP;
 		  yourself
 ]
+
+{ #category : #'as yet unclassified' }
+RNROSDay6 >> explorationTpLesson [
+
+	^ RNROSExplorationTP new lesson
+]

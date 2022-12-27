@@ -6,7 +6,7 @@ Class {
 
 { #category : #'as yet unclassified' }
 RNROSNavigationTP >> filesystem [
-	^ super filesystem / #ROSNavigation
+	^ super filesystem / #ROSNavigationTP
 ]
 
 { #category : #'as yet unclassified' }

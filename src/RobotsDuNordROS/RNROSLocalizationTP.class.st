@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #accessing }
+RNROSLocalizationTP >> filesystem [
+	^ super filesystem / #ROSLocalizationTP
+]
+
+{ #category : #accessing }
 RNROSLocalizationTP >> lesson [
 	^ SaLesson new
 		title: 'Localization TP';
@@ -19,13 +24,13 @@ RNROSLocalizationTP >> lesson [
 { #category : #accessing }
 RNROSLocalizationTP >> writeAmclPoseSubscriber [
 
-	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationService
+	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationServicePosePublish
 ]
 
 { #category : #accessing }
 RNROSLocalizationTP >> writeInitialPosePublisher [
 
-	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationService
+	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationServiceCall
 ]
 
 { #category : #accessing }
