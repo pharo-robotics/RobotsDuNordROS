@@ -1,7 +1,7 @@
 Class {
 	#name : #RNROSIntroduction,
 	#superclass : #RNROSLesson,
-	#category : #'RobotsDuNordROS-Day2'
+	#category : #'RobotsDuNordROS-Day1'
 }
 
 { #category : #accessing }

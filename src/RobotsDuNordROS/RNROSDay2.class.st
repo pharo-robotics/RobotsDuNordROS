@@ -1,6 +1,3 @@
-"
-Intro on basic concepts 
-"
 Class {
 	#name : #RNROSDay2,
 	#superclass : #RNROSCourse,
@@ -9,33 +6,22 @@ Class {
 
 { #category : #'as yet unclassified' }
 RNROSDay2 >> course [
-	"OSPlatform current isUnix
-		ifFalse: [ ^ self
-				error:
-					'The lesson of ROS: Elemental Concepts requires to be done in linux! Pleasem load Sagan in your Ubuntu/ROS installation, and catch from there' ]."
 
 	^ SaCourse new
-		title: 'ROS: Elemental Concepts';
+		title: 'ROS: Slam & Navigation';
 		courseFolder: #RosElementalConcepts;
-		addLesson: self introduction id: #Introduction;
-		addLesson: self nodes id: #Nodes;
-		addLesson: self topics;
+		addLesson: self turtlebot id: #'Turtlebot 3';
+		addLesson: self slam id: #'SLAM Algorithms';
 		yourself
 ]
 
 { #category : #'as yet unclassified' }
-RNROSDay2 >> introduction [
-
-	^ RNROSIntroduction new lesson
-]
-
-{ #category : #accessing }
-RNROSDay2 >> nodes [
-
-	^ RNROSNodes new lesson
+RNROSDay2 >> slam [
+	^ RNROSSlam new lesson
 ]
 
 { #category : #'as yet unclassified' }
-RNROSDay2 >> topics [
-	^ RNROSTopics new lesson
+RNROSDay2 >> turtlebot [
+
+	^ RNROSTurtlebot3 new lesson
 ]

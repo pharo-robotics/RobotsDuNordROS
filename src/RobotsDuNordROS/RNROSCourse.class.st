@@ -10,19 +10,19 @@ Class {
 { #category : #'as yet unclassified' }
 RNROSCourse class >> courseDay1 [
 
-	^ RNROSDay1 new course.
+	^ RNROSDay0 new course.
 ]
 
 { #category : #'as yet unclassified' }
 RNROSCourse class >> courseDay2 [
 
-	^ RNROSDay2 new course
+	^ RNROSDay1 new course
 ]
 
 { #category : #'as yet unclassified' }
 RNROSCourse class >> courseDay3 [
 
-	^ RNROSDay3 new course
+	^ RNROSDay2 new course
 ]
 
 { #category : #'as yet unclassified' }

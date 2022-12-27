@@ -4,7 +4,7 @@ I explain git
 Class {
 	#name : #RNROSGit,
 	#superclass : #RNROSLesson,
-	#category : #'RobotsDuNordROS-Day1'
+	#category : #'RobotsDuNordROS-Day0'
 }
 
 { #category : #'as yet unclassified' }

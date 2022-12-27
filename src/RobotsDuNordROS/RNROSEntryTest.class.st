@@ -19,7 +19,7 @@ Vous risquez de perdre vos reponses.
 Class {
 	#name : #RNROSEntryTest,
 	#superclass : #Object,
-	#category : #'RobotsDuNordROS-Day1'
+	#category : #'RobotsDuNordROS-Day0'
 }
 
 { #category : #tests }

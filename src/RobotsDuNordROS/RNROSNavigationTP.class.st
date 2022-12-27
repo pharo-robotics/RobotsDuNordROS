@@ -1,16 +1,16 @@
 Class {
-	#name : #RNROSNavigation,
+	#name : #RNROSNavigationTP,
 	#superclass : #RNROSLesson,
-	#category : #'RobotsDuNordROS-Day4'
+	#category : #'RobotsDuNordROS-Day5'
 }
 
 { #category : #'as yet unclassified' }
-RNROSNavigation >> filesystem [
+RNROSNavigationTP >> filesystem [
 	^ super filesystem / #ROSNavigation
 ]
 
 { #category : #'as yet unclassified' }
-RNROSNavigation >> lesson [
+RNROSNavigationTP >> lesson [
 
 	^ SaLesson new
 		  title: 'Navigation';

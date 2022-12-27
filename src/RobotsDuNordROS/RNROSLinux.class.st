@@ -4,7 +4,7 @@ I explain linux
 Class {
 	#name : #RNROSLinux,
 	#superclass : #RNROSLesson,
-	#category : #'RobotsDuNordROS-Day1'
+	#category : #'RobotsDuNordROS-Day0'
 }
 
 { #category : #accessing }

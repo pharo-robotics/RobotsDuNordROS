@@ -8,25 +8,28 @@ Class {
 RNROSDay3 >> course [
 
 	^ SaCourse new
-		title: 'ROS: Slam & Navigation';
-		courseFolder: #RosElementalConcepts;
-		addLesson: self slam id: #'SLAM Algorithms';
-		addLesson: self python id: #'The Navigation Stack';
-		addLesson: self localization id: #'Localization';
-		yourself
+		  title: 'ROS: Localization & Services';
+		  courseFolder: #RosElementalConcepts;
+		  addLesson: self slamTpLesson id: #SlamTP;
+		  addLesson: self servicesLesson id: #Services;
+		  addLesson: self localizationLesson id: #Localization;
+		  yourself
 ]
 
 { #category : #'as yet unclassified' }
-RNROSDay3 >> localization [ 
+RNROSDay3 >> localizationLesson [
+
 	^ RNROSLocalization new lesson
 ]
 
 { #category : #'as yet unclassified' }
-RNROSDay3 >> python [
-	^ RNROSPyhonProgramming new lesson
+RNROSDay3 >> servicesLesson [
+
+	^ RNROSServices new lesson
 ]
 
 { #category : #'as yet unclassified' }
-RNROSDay3 >> slam [
-	^ RNROSSlam new lesson
+RNROSDay3 >> slamTpLesson [
+
+	^ RNROSSlamTP new lesson
 ]
