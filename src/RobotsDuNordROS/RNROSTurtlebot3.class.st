@@ -20,11 +20,8 @@ RNROSTurtlebot3 >> lesson [
 		  addUnit: self tbt3Schematics;
 		  addUnit: self tbt3SchematicsQuiz;
 		  addUnit: self tbt3Installation;
-		  addUnit: self tbt3InstallationQuiz;
 		  addUnit: self networkTbt3Usage;
-		  addUnit: self networkTbt3UsageQuiz;
 		  addUnit: self tbt3Bringup;
-		  addUnit: self tbt3BringupQuiz;
 		  addUnit: self tbt3CommandVelocity;
 		  addUnit: self quiz;
 		  addUnit: self summary;
@@ -40,39 +37,42 @@ RNROSTurtlebot3 >> networkTbt3Usage [
 ]
 
 { #category : #accessing }
-RNROSTurtlebot3 >> networkTbt3UsageQuiz [
-
-	| questions |
-	self flag: #todo.
-	questions := OrderedCollection new.
-	questions add: ((SaMultipleChoiceQuestion id: #TBTNetQuizQ1)
-			 beMultiple;
-			 question:
-				 'Combien des processus sont visibles pendant le processus de SLAM';
-			 choices: { '2'. '5'. '>5' };
-			 yourself).
-
-	^ (SaQuestionaire id: #TBTNetQuiz)
-		  title: 'Quiz #1: Reseaux ';
-		  questions: questions shuffle;
-		  yourself
-]
-
-{ #category : #accessing }
 RNROSTurtlebot3 >> quiz [
 
 	| questions |
-	self flag: #todo.
 	questions := OrderedCollection new.
+
+
 	questions add: ((SaMultipleChoiceQuestion id: #TBTQ1)
 			 beMultiple;
 			 question:
-				 'Combien des processus sont visibles pendant le processus de SLAM';
-			 choices: { '2'. '5'. '>5' };
+				 'Le turtlebot et le nuc de mon equipe doive etre connecte a';
+			 choices:
+				 { 'un portable de mon equipe'. 'reseaux ISEN'. 'router amene par le prof' };
+			 yourself).
+	questions add: ((SaMultipleChoiceQuestion id: #TBTQ2)
+			 beMultiple;
+			 question:
+				 'On va commencer un experiment. On veut etre sur qu''on aurais pas des problemes:';
+			 choices:
+				 { 'On publie un valeur de test dans le topic command velocity'.
+				 'On publie un valeur de test dans le topic test'.
+				 'on execute ping depuis le nuc ver le turtlebot'.
+				 'on assure que le nuc et le turtlebot sont conntecte dans le meme reseaux'.
+				 'nous nous confions à dieu' };
 			 yourself).
 
+	questions add: ((SaMultipleChoiceQuestion id: #TBTQ3)
+			 beMultiple;
+			 question: 'On n''a pas fait la routine de bring-up';
+			 choices:
+				 { 'On peu ouvrir Rviz'. 'On peut lister des topics disponibles'.
+				 'On peu commander au robot de se deplacer'.
+				 'On peu mesurer la distance du robot aux obstacles'.
+				 'On peu se connecter aux turtlebot' };
+			 yourself).
 	^ (SaQuestionaire id: #TBTQuiz)
-		  title: 'Quiz #1: Turtlebot 3 ';
+		  title: 'Quiz #2: Unite ';
 		  questions: questions shuffle;
 		  yourself
 ]
@@ -81,25 +81,6 @@ RNROSTurtlebot3 >> quiz [
 RNROSTurtlebot3 >> tbt3Bringup [
 
 	^ self markdown: 'bringup.md' title: 'Bring-up' id: #TBT3BringUp
-]
-
-{ #category : #accessing }
-RNROSTurtlebot3 >> tbt3BringupQuiz [
-
-	| questions |
-	self flag: #todo.
-	questions := OrderedCollection new.
-	questions add: ((SaMultipleChoiceQuestion id: #TBTBupQuizQ1)
-			 beMultiple;
-			 question:
-				 'Combien des processus sont visibles pendant le processus de SLAM';
-			 choices: { '2'. '5'. '>5' };
-			 yourself).
-
-	^ (SaQuestionaire id: #TBTBupQuiz)
-		  title: 'Quiz #1: Bring-up ';
-		  questions: questions shuffle;
-		  yourself
 ]
 
 { #category : #accessing }
@@ -121,25 +102,6 @@ RNROSTurtlebot3 >> tbt3Installation [
 ]
 
 { #category : #accessing }
-RNROSTurtlebot3 >> tbt3InstallationQuiz [
-
-	| questions |
-	self flag: #todo.
-	questions := OrderedCollection new.
-	questions add: ((SaMultipleChoiceQuestion id: #TBTInstallQuizQ1)
-			 beMultiple;
-			 question:
-				 'Combien des processus sont visibles pendant le processus de SLAM';
-			 choices: { '2'. '5'. '>5' };
-			 yourself).
-
-	^ (SaQuestionaire id: #TBTInstallQuiz)
-		  title: 'Quiz #1: Turtlebot 3 ';
-		  questions: questions shuffle;
-		  yourself
-]
-
-{ #category : #accessing }
 RNROSTurtlebot3 >> tbt3Schematics [
 
 	^ self
@@ -152,13 +114,30 @@ RNROSTurtlebot3 >> tbt3Schematics [
 RNROSTurtlebot3 >> tbt3SchematicsQuiz [
 
 	| questions |
-	self flag: #todo.
 	questions := OrderedCollection new.
 	questions add: ((SaMultipleChoiceQuestion id: #TBTSchemQuizQ1)
 			 beMultiple;
 			 question:
-				 'Combien des processus sont visibles pendant le processus de SLAM';
-			 choices: { '2'. '5'. '>5' };
+				 'Combien des cartes sont present dans la un turtlebot burger?';
+			 choices: { '2'. '3'. '4'. '>4' };
+			 yourself).
+	questions add: ((SaMultipleChoiceQuestion id: #TBTSchemQuizQ2)
+			 beMultiple;
+			 question: 'Combien des degrees sont capte pour le Lidar?';
+			 choices: { '90'. '180'. '360'. '575' };
+			 yourself).
+	questions add: ((SaMultipleChoiceQuestion id: #TBTSchemQuizQ3)
+			 beMultiple;
+			 question: 'Les composantes de base sont';
+			 choices: { 'Raspberry Pi 3 Model B+'. 'Raspberry Pi 4 Model C--'.
+				 'Châssis'. 'Moteurs'. 'Roues'. 'OpenCR'. 'SBC'. 'PC' };
+			 yourself).
+	questions add: ((SaMultipleChoiceQuestion id: #TBTSchemQuizQ4)
+			 beMultiple;
+			 question: 'Turtlebot3 burger est une plateforme à deux roues à';
+			 choices:
+				 { 'Entraînement différentiel'. 'Segway'. 'Tank'. 'Trailer'.
+				 'Bike'. 'Omnidirectionnel' };
 			 yourself).
 
 	^ (SaQuestionaire id: #TBTSchemQuiz)
