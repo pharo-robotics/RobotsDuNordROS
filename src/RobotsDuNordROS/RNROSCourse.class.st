@@ -27,7 +27,8 @@ RNROSCourse class >> courseDay3 [
 
 { #category : #'as yet unclassified' }
 RNROSCourse class >> courses [
-	^ {(#'Jour 1' -> [ self courseDay1 ]).
-	(#'Jour 2' -> [ self courseDay2 ]).
-	(#'Jour 3' -> [ self courseDay3 ])} asDictionary
+	^ {
+	(#'Jour 1: Pre-requis' -> [ self courseDay1 ]).
+	(#'Jour 2: Architecture ROS' -> [ self courseDay2 ]).
+	(#'Jour 3: Slam' -> [ self courseDay3 ])} asDictionary
 ]
