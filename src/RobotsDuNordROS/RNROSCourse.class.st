@@ -8,27 +8,59 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-RNROSCourse class >> courseDay1 [
+RNROSCourse class >> courseDay0 [
 
 	^ RNROSDay0 new course.
 ]
 
 { #category : #'as yet unclassified' }
-RNROSCourse class >> courseDay2 [
+RNROSCourse class >> courseDay1 [
 
-	^ RNROSDay1 new course
+	^ RNROSDay1 new course.
 ]
 
 { #category : #'as yet unclassified' }
-RNROSCourse class >> courseDay3 [
+RNROSCourse class >> courseDay2 [
 
 	^ RNROSDay2 new course
 ]
 
 { #category : #'as yet unclassified' }
+RNROSCourse class >> courseDay3 [
+
+	^ RNROSDay3 new course
+]
+
+{ #category : #'as yet unclassified' }
+RNROSCourse class >> courseDay4 [
+
+	^ RNROSDay4 new course
+]
+
+{ #category : #'as yet unclassified' }
+RNROSCourse class >> courseDay5 [
+
+	^ RNROSDay5 new course
+]
+
+{ #category : #'as yet unclassified' }
+RNROSCourse class >> courseDay6 [
+
+	^ RNROSDay6 new course
+]
+
+{ #category : #'as yet unclassified' }
 RNROSCourse class >> courses [
-	^ {
-	(#'Jour 1: Pre-requis' -> [ self courseDay1 ]).
-	(#'Jour 2: Architecture ROS' -> [ self courseDay2 ]).
-	(#'Jour 3: Slam' -> [ self courseDay3 ])} asDictionary
+
+	^ { 
+		  (#'Pre-requis' -> [ self courseDay0 ]).
+		  (#'Jour 1: Architecture ROS' -> [ self courseDay1 ]).
+		  (#'Jour 2: Intro Turtlebot 3 & Slam' -> [ self courseDay2 ]).
+		  (#'Jour 3: TP Slam, Services & Localisation'
+		   -> [ self courseDay3 ]).
+		  (#'Jour 4: TP Localisation, Actions & Navigation'
+		   -> [ self courseDay4 ]).
+		  (#'Jour 5: TP Navigation' -> [ self courseDay5 ]).
+		  (#'Jour 6: TP Exploration' -> [ self courseDay6 ]) }
+		  asOrderedDictionary
 ]
