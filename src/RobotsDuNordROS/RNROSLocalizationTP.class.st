@@ -15,3 +15,21 @@ RNROSLocalizationTP >> lesson [
 		addUnit: self summary;
 		yourself
 ]
+
+{ #category : #accessing }
+RNROSLocalizationTP >> writeAmclPoseSubscriber [
+
+	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationService
+]
+
+{ #category : #accessing }
+RNROSLocalizationTP >> writeInitialPosePublisher [
+
+	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationService
+]
+
+{ #category : #accessing }
+RNROSLocalizationTP >> writeServiceCallInPython [
+
+	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationService
+]

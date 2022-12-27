@@ -13,17 +13,24 @@ RNROSNavigationTP >> filesystem [
 RNROSNavigationTP >> lesson [
 
 	^ SaLesson new
-		  title: 'Navigation';
+		  title: 'Navigation TP';
 		  addUnit: self objectives;
-		  addUnit: self whatIsNavigation;
-		  addUnit: self localPathPlanning;
-		  addUnit: self localPathPlanningQuiz;
-		  addUnit: self globalPathPlanning;
-		  addUnit: self globalPathPlanningQuiz;
-		  addUnit: self navigationExperiment;
-		  addUnit: self navigationExperimentQuiz;
-			addUnit: self navigationProgramExperiment;
-		  addUnit: self quiz;
+		  addUnit: self navigateToSpecificPoint;
+		  addUnit: self patrolArea;
 		  addUnit: self summary;
 		  yourself
+]
+
+{ #category : #'as yet unclassified' }
+RNROSNavigationTP >> navigateToSpecificPoint [
+	^ self markdown: 'navigate.point.md' title: 'Navigate to specific point' id: #ROSNavigationPoint
+]
+
+{ #category : #'as yet unclassified' }
+RNROSNavigationTP >> patrolArea [
+
+	^ self
+		  markdown: 'patrol.md'
+		  title: 'Patrol area'
+		  id: #ROSNavigationPatrol
 ]
