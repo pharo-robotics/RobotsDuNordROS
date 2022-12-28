@@ -1,5 +1,5 @@
 # Robot Operative System (ROS)
-![ROS](https://www.ros.org/wp-content/uploads/2013/10/rosorg-logo1.png width=200 caption=ROS)
+![ROS](https://www.ros.org/imgs/ros_logo.png width=200 caption=ROS)
 
 
 ## Un peu contexte
@@ -18,7 +18,7 @@ Cependant, une description plus précise serait que ROS est un middleware pour l
 
 ROS fournit les fonctions essentielles requises pour les programmes d'application des robots comme les bibliothèques telles que la transmission/réception de données entre matériels hétérogènes, l'ordonnancement et le traitement des erreurs.
 
-![ROS](https://www.ros.org/wp-content/uploads/2013/12/ros_equation.png caption=ROS)
+![ROS](https://www.ros.org/imgs/ros-equation.png width=600 caption=ROS)
 
 
 ## Les aspects principaux
