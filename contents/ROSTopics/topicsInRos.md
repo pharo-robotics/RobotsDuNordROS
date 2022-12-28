@@ -13,7 +13,7 @@ La communication thématique est une communication asynchrone qui est basée sur
 
 ## Une communication unidirectionel
 
-![PubSub](http://rmod-files.lille.inria.fr/Teach/pubsub.png|size=400)
+![PubSub](http://rmod-files.lille.inria.fr/Teach/pubsub.png width=400)
 
 La communication sur le sujet utilise le même type de message pour l'éditeur et l'abonné, comme le montre la figure . Le node d'abonné reçoit l'information du node d'éditeur correspondant au nom de sujet identique enregistré dans le maître. Sur la base de ces informations, le node d'abonné se connecte directement au node d'éditeur pour recevoir les messages. Par exemple, si la position actuelle du robot est générée sous la forme d'informations d'odométrie en calculant les valeurs de codage des deux roues du robot mobile, les informations d'odométrie asynchrone peuvent être transmises en continu en flux unidirectionnel à l'aide d'un message thématique (x, y,i). Comme les sujets sont unidirectionnels et restent connectés pour envoyer ou recevoir des messages en continu, il convient aux données de capteurs qui nécessitent la publication périodique de messages. En outre, plusieurs abonnés peuvent recevoir un message d'un éditeur et vice versa. Des connexions multiples d'éditeurs et d'abonnés sont également disponibles.
 
