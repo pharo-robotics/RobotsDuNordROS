@@ -48,14 +48,15 @@ Un point physique (x,y) = ((i,j)+origin) * resolution.
 
 ### Excercise 1
 Ecrire un nœde python qui subscribe au topic map_metadata.
-A chaque fois que ce nœde recoive un nouvelle information, il doit imprimer en ecran:
-* La valeur (i,j) pour les points physiques:
-{(1,0);(0,1);(-1,0);(0,-1)}, 
-{(10,0);(0,10);(-10,0);(0,-10)}, 
-{(100,0);(0,100);(-100,0);(0,-100)}
-Noté que les points sont en mettres, et il faut calculer leur (i,j).
+A chaque fois que ce nœde recoive un nouvelle information, pour chaque point *physique*: 
+\{(1,0);(0,1);(-1,0);(0,-1)\}, 
+\{(10,0);(0,10);(-10,0);(0,-10)\}, 
+\{(100,0);(0,100);(-100,0);(0,-100)\}
 
-* La valeur I de chaque point.
+il faut calculer et imprimer: 
+
+* La valeur (i,j) 
+* La valeur I de chaque point pour chaque (i,j) calcule dans le premier pas.
 
 
 
@@ -77,7 +78,7 @@ Ce tableur contiens 3 possible valeurs: Occupé, Libre, Unconnu.
 ### Excercise 2
 Ecrire un *nouveau* nœde python qui subscribe au topic map.
 A chaque fois que ce nœde recoive un nouvelle information, il doit compter combien des Occupé, Libre et Unconnu on trouve dans le carré disposse par les points physiques:
-{(10,0);(0,10);(-10,0);(0,-10)}. 
+\{(10,0);(0,10);(-10,0);(0,-10)\}. 
 
 Une fois calculé, l'imprimer en ecran. 
 On attende voir quelquechose comme ça:
