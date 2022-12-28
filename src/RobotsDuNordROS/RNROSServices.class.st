@@ -132,7 +132,7 @@ RNROSServices >> turtleSimServiceExperimentQuiz [
 				 'Demarre un deuxieme simulateur qui partage l''ecran avec ce la deja ouvert' };
 			 yourself).
 
-	questions add: ((SaMultipleChoiceQuestion id: #ServicesExperimentQ2)
+	questions add: ((SaMultipleChoiceQuestion id: #ServicesExperimentQ3)
 			 beMultiple;
 			 question: 'rosservice call /clear';
 			 choices: { 'Enleve toutes les tortues du simulateur'.
