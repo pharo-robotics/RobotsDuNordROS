@@ -41,7 +41,7 @@ $ cd ~/catkin_ws
 Ouvrez le fichier CMakeLists.txt
 
 ```
-catkin_install_python(PROGRAMS scripts/talker.py scripts/subscriber.py
+catkin_install_python(PROGRAMS scripts/publisher.py scripts/subscriber.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 ```
