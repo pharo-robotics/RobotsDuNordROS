@@ -8,8 +8,8 @@ La technologie de base du TurtleBot3 est le SLAM (Navigation and Manipulation), 
 
 
 ## Specs
-![PubSub](https://emanual.robotis.com/assets/images/platform/turtlebot3/hardware_setup/turtlebot3_dimension1.png|size=400)
-![PubSub](https://emanual.robotis.com/assets/images/platform/turtlebot3/hardware_setup/turtlebot3_burger_components.png|size=400)
+![PubSub](https://emanual.robotis.com/assets/images/platform/turtlebot3/hardware_setup/turtlebot3_dimension1.png width=400)
+![PubSub](https://emanual.robotis.com/assets/images/platform/turtlebot3/hardware_setup/turtlebot3_burger_components.png width=400)
 
 
 Les composants de base de Turtlebot3 sont les suivants : Raspberry Pi 3 Model B+, Châssis, moteurs, roues, OpenCR, SBC, capteurs et batterie. Les châssis sont des plaques de gaufre qui contiennent d'autres composants. La plaque de gaufre joue un rôle important en tant que châssis bien que sa taille soit aussi petite que votre paume. La plaque de gaufre est fabriquée par la méthode du moule à injection pour réduire le coût de fabrication. Cependant, les données CAO de la Waffle Plate pour l'impression 3D sont également disponibles via Onshape. Turtlebot3 Burger est une plateforme à deux roues à entraînement différentiel, mais il est personnalisable structurellement et mécaniquement de nombreuses façons : Segway, Tank, Bike, Trailer et ainsi de suite.

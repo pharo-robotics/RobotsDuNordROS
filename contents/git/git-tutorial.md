@@ -4,5 +4,5 @@
   
 
  
-![CheatSheet](https://i.redd.it/8341g68g1v7y.png|size=1200&caption=CheatSheet)
+![CheatSheet](https://i.redd.it/8341g68g1v7y.png width=1200 caption=CheatSheet)
 

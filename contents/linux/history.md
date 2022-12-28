@@ -3,7 +3,7 @@
 
 ##Linux
 
-![Linux](https://www.extremetech.com/wp-content/uploads/2012/05/Linux-logo-without-version-number-banner-sized.jpg|size=200&caption=Linux)
+![Linux](https://www.extremetech.com/wp-content/uploads/2012/05/Linux-logo-without-version-number-banner-sized.jpg width=200 caption=Linux)
 
 Linux ou GNU/Linux est une famille de systèmes d'exploitation open source de type Unix fondé sur le noyau Linux, créé en 1991 par Linus Torvalds. De nombreuses distributions GNU/Linux ont depuis vu le jour et constituent un important vecteur de popularisation du mouvement du logiciel libre.
 
@@ -12,7 +12,7 @@ Si à l'origine, Linux a été développé pour les ordinateurs compatibles PC, 
 
 ##Open Source
 
-![Linux](https://www.gnu.org/graphics/gerwinski-gnu-head.png|size=200&caption=GNU)
+![Linux](https://www.gnu.org/graphics/gerwinski-gnu-head.png width=200 caption=GNU)
 
 La différence essentielle des distributions GNU/Linux certifiées par la Free software foundation par rapport à d’autres systèmes d’exploitation concurrents — comme Mac OS, Microsoft Windows et Solaris — est d’être des systèmes d’exploitation libres, apportant quatre libertés aux utilisateurs, définies par la licence Licence publique générale GNU (GPL), les rendant indépendants de tout éditeur et encourageant l’entraide et le partage.
 
@@ -25,7 +25,7 @@ L’ouverture du code source, l’un des quatre critères correspondant à la no
 
 ##Distros
 
-![Distros](http://evlearners.com/wp-content/uploads/2019/06/linux-distro.jpg|size=500&caption=Distributions)
+![Distros](http://evlearners.com/wp-content/uploads/2019/06/linux-distro.jpg width=500 caption=Distributions)
 
 Les logiciels libres sont développés de manière collaborative, souvent indépendamment les uns des autres, et peuvent être librement redistribués. Il s’ensuit une particularité du monde GNU/Linux : la séparation fréquente entre ceux qui développent les logiciels et ceux qui les distribuent.
 

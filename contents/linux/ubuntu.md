@@ -1,6 +1,6 @@
 #Ubuntu
 
-![Ubuntu](https://logos-download.com/wp-content/uploads/2016/02/Ubuntu.png|size=100&caption=Ubuntu)
+![Ubuntu](https://logos-download.com/wp-content/uploads/2016/02/Ubuntu.png width=100 caption=Ubuntu)
 
 ##Information General 
 
