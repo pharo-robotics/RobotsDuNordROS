@@ -4,5 +4,5 @@
   
 
  
-![CheatSheet](https://rumorscity.com/wp-content/uploads/2014/08/10-Linux-Unix-Command-Cheat-Sheet-021.jpg|size=1300&caption=CheatSheet)
+![CheatSheet](https://rumorscity.com/wp-content/uploads/2014/08/10-Linux-Unix-Command-Cheat-Sheet-021.jpg width=1300 caption=CheatSheet)
 

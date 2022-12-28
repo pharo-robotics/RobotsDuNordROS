@@ -1,4 +1,4 @@
-![Slam](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanswers.ros.org%2Fupfiles%2F1339198636377568.png|size=400&caption="Slam")
+![Slam](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanswers.ros.org%2Fupfiles%2F1339198636377568.png width=400 caption="Slam")
 
 
 En géométrie numérique et en robotique, la localisation et la cartographie simultanées (SLAM) est le problème de calcul consistant à construire ou à mettre à jour une carte d'un environnement inconnu tout en gardant une trace de l'emplacement d'un agent dans cet environnement. Bien que ce problème semble être au départ un problème de poule et d'œuf, il existe plusieurs algorithmes connus pour le résoudre, au moins approximativement, en un temps traitable pour certains environnements. Les méthodes de solution approximative les plus courantes sont le filtre particulaire, le filtre de Kalman étendu, l'intersection de covariance et GraphSLAM. Les algorithmes SLAM sont utilisés dans la navigation, la cartographie robotique. 
@@ -8,7 +8,7 @@ En géométrie numérique et en robotique, la localisation et la cartographie si
 ## Filtre à Particles
  
  
-![FilterPaticle](https://3.bp.blogspot.com/-Ufkc8_kcxGs/Tst1Tt8ZWZI/AAAAAAAAEKc/pjwA56Ttb-s/w1200-h630-p-k-no-nu/Object+Recognition27.png|caption="Filter")
+![FilterPaticle](https://3.bp.blogspot.com/-Ufkc8_kcxGs/Tst1Tt8ZWZI/AAAAAAAAEKc/pjwA56Ttb-s/w1200-h630-p-k-no-nu/Object+Recognition27.png caption="Filter")
  Les filtres à particules ou méthodes de Monte Carlo séquentiel (SMC) sont un ensemble d'algorithmes de Monte Carlo utilisés pour résoudre les problèmes de filtrage qui surviennent dans le traitement du signal et l'inférence statistique bayésienne. Le problème de filtrage consiste à estimer les états internes dans les systèmes dynamiques lorsque des observations partielles sont faites, et que des perturbations aléatoires sont présentes dans les capteurs ainsi que dans le système dynamique. L'objectif est de calculer les distributions postérieures des états d'un processus de Markov, compte tenu de certaines observations partielles et bruitées. 
  
 Le filtrage de particules utilise un ensemble de particules (aussi appelées échantillons) pour représenter la distribution postérieure d'un processus stochastique donné, compte tenu d'observations bruyantes et/ou partielles. Le modèle état-espace peut être non linéaire et les distributions de l'état initial et du bruit peuvent prendre n'importe quelle forme requise. Les techniques de filtrage des particules fournissent une méthodologie bien établie pour générer des échantillons à partir de la distribution requise sans nécessiter d'hypothèses sur le modèle état-espace ou les distributions d'état. Cependant, ces méthodes ne sont pas très performantes lorsqu'elles sont appliquées à des systèmes à très hautes dimensions.

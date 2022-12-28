@@ -2,7 +2,7 @@
 
 La virtualisation consiste, en informatique, à exécuter sur une machine hôte, dans un environnement isolé, des systèmes d'exploitation — on parle alors de virtualisation système — ou des applications — on parle alors de virtualisation applicative. Ces ordinateurs virtuels sont appelés serveur privé virtuel (Virtual Private Server ou VPS) ou encore environnement virtuel (Virtual Environment ou VE). 
 
-![Architecture](https://www.ni.com/cms/images/devzone/tut/HostedVirtualizationSmall_20090325191230.PNG|size=600&caption=Architecture)
+![Architecture](https://www.ni.com/cms/images/devzone/tut/HostedVirtualizationSmall_20090325191230.PNG width=600 caption=Architecture)
  
 Il peut sembler a priori étrange de simuler d'autres machines sur une machine hôte : un système d'exploitation est conçu pour utiliser du matériel qui est entièrement sous son contrôle. La juxtaposition de plusieurs systèmes non conçus pour communiquer entre eux peut faire craindre des inefficiences auxquelles s'ajoute le fait que le processus de virtualisation consomme des ressources. Le tableau n'est pas aussi sombre. D'une part, on évite une grande partie de ces inefficiences juste en disposant de disques différents pour chaque système, et d'autre part le coût de la mémoire permet à chacun de ces systèmes de rester résident, et parfois avec de larges sections de code partagées4. Par ailleurs, le microcode des mainframes comme des microprocesseurs inclut de plus en plus de fonctionnalités qui rendent la virtualisation plus efficace.
 
@@ -12,7 +12,7 @@ Enfin, il est courant pour une entreprise de disposer d'une quinzaine de serveur
 
 ##Virtual Box 
  
-![VBox](https://maxcdn.icons8.com/Share/icon/color/Logos/virtualbox1600.png|size=200&caption=VBox)
+![VBox](https://maxcdn.icons8.com/Share/icon/color/Logos/virtualbox1600.png width=200 caption=VBox)
  
 VirtualBox est un puissant produit de virtualisation x86 et AMD64/Intel64 pour les entreprises et les particuliers. Non seulement VirtualBox est un produit extrêmement riche en fonctionnalités et très performant pour les entreprises, mais c'est aussi la seule solution professionnelle qui soit disponible gratuitement en tant que logiciel libre selon les termes de la licence publique générale GNU (GPL) version 2. Voir "À propos de VirtualBox" pour une introduction.
 

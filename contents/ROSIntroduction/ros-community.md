@@ -1,5 +1,5 @@
 # Communauté ROS
-![ROS](https://www.ros.org/wp-content/uploads/2013/10/rosorg-logo1.png|size=200&caption=ROS)
+![ROS](https://www.ros.org/wp-content/uploads/2013/10/rosorg-logo1.png width=200 caption=ROS)
 
 ROS comme autres projets opensource s'appui sur une communauté. 
 Cette communauté propose plusieurs canales de communication. 

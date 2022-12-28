@@ -1,4 +1,4 @@
-![Localisation](https://dlsdc.com/images/general/localization.jpg|size=400&caption="Slam")
+![Localisation](https://dlsdc.com/images/general/localization.jpg width=400 caption="Slam")
 
 
 
@@ -47,7 +47,7 @@ Imaginez un robot avec une carte interne de son environnement. Lorsque le robot 
 
 Comme le robot ne se comporte pas toujours de manière parfaitement prévisible, il génère de nombreuses suppositions aléatoires sur sa prochaine position. Ces suppositions sont connues sous le nom de particules. Chaque particule contient une description complète d'un état futur possible. Lorsque le robot observe l'environnement, il rejette les particules qui ne correspondent pas à cette observation, et génère d'autres particules proches de celles qui semblent cohérentes. Au final, on peut espérer que la plupart des particules convergent vers l'endroit où se trouve réellement le robot.
 
-![Algo](http://rmod-files.lille.inria.fr/Teach/algo-amcl.png|size=400&caption="Localisation")
+![Algo](http://rmod-files.lille.inria.fr/Teach/algo-amcl.png width=400 caption="Localisation")
 
 
 

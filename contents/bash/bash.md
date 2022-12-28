@@ -1,6 +1,6 @@
 #Bash 
 
-![Bash](https://tiswww.case.edu/php/chet/img/bash-logo-web.png|size=200&caption=Bash)	
+![Bash](https://tiswww.case.edu/php/chet/img/bash-logo-web.png width=200 caption=Bash)	
 
 
 Bash (acronyme de Bourne-Again shell) est un interpréteur en ligne de commande de type script. C'est le shell Unix du projet GNU.
