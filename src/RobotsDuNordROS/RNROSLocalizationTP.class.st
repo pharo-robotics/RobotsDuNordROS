@@ -30,7 +30,7 @@ RNROSLocalizationTP >> writeAmclPoseSubscriber [
 { #category : #accessing }
 RNROSLocalizationTP >> writeInitialPosePublisher [
 
-	^ self markdown: 'initial.pose.md' title: 'Calling Services: initial pose command' id: #ROSNavigationServiceCall
+	^ self markdown: 'initial.pose.md' title: 'Calling Services: initial pose command' id: #ROSNavigationInitialPose
 ]
 
 { #category : #accessing }
