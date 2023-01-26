@@ -14,9 +14,9 @@ RNROSLocalizationTP >> lesson [
 	^ SaLesson new
 		title: 'Localization TP';
 		addUnit: self objectives;
-		addUnit: self writeServiceCallInPython;
 		addUnit: self writeInitialPosePublisher;
 		addUnit: self writeAmclPoseSubscriber;
+		addUnit: self writeServiceCallInPython;
 		addUnit: self summary;
 		yourself
 ]
@@ -24,17 +24,17 @@ RNROSLocalizationTP >> lesson [
 { #category : #accessing }
 RNROSLocalizationTP >> writeAmclPoseSubscriber [
 
-	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationServicePosePublish
+	^ self markdown: 'amcl.pose.md' title: 'AMCL pose' id: #ROSNavigationServicePosePublish
 ]
 
 { #category : #accessing }
 RNROSLocalizationTP >> writeInitialPosePublisher [
 
-	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationServiceCall
+	^ self markdown: 'initial.pose.md' title: 'Calling Services: initial pose command' id: #ROSNavigationServiceCall
 ]
 
 { #category : #accessing }
 RNROSLocalizationTP >> writeServiceCallInPython [
 
-	^ self markdown: 'service.call.md' title: 'Calling Services' id: #ROSNavigationService
+	^ self markdown: 'service.call.md' title: 'Reset localization by service calling' id: #ROSNavigationServiceCall
 ]

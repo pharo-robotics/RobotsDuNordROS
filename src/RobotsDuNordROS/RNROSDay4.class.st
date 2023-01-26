@@ -5,18 +5,12 @@ Class {
 }
 
 { #category : #'as yet unclassified' }
-RNROSDay4 >> actionsLesson [
-	^ RNROSActions new lesson
-]
-
-{ #category : #'as yet unclassified' }
 RNROSDay4 >> course [
 
 	^ SaCourse new
 		  title: 'ROS: Navigation & Actions';
 		  courseFolder: #RosElementalConcepts;
 		  addLesson: self localizationTpLesson id: #LocalizationTP;
-		  addLesson: self actionsLesson id: #Actions;
 		  addLesson: self navigationLesson id: #Navigation;
 		  yourself
 ]
