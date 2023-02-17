@@ -18,7 +18,7 @@ from __future__ import print_function
 
 import sys
 import rospy
-from beginner_tutorials.srv import *
+from rospy_tutorials.srv import *
 
 def add_two_ints_client(x, y):
     rospy.wait_for_service('add_two_ints')
@@ -47,11 +47,11 @@ if __name__ == "__main__":
 Addresez vous sur le dossier catkin_ws
 
 ```
-$ cd ~/catkin_ws
+$ cd ~/catkin_ws/src
 ```
 
 
-Ouvrez le fichier CMakeLists.txt
+Ouvrez le fichier CMakeLists.txt dans votre package
 
 ```
 catkin_install_python(PROGRAMS scripts/client.py

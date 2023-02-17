@@ -16,7 +16,7 @@ Dans ce fichier, coller le contenu suivant
 
 from __future__ import print_function
 
-from beginner_tutorials.srv import AddTwoInts,AddTwoIntsResponse
+from rospy_tutorials.srv import AddTwoInts,AddTwoIntsResponse
 import rospy
 
 def handle_add_two_ints(req):
@@ -37,11 +37,11 @@ if __name__ == "__main__":
 Addresez vous sur le dossier catkin_ws
 
 ```
-$ cd ~/catkin_ws
+$ cd ~/catkin_ws/src
 ```
 
 
-Ouvrez le fichier CMakeLists.txt
+Ouvrez le fichier CMakeLists.txt dans votre package.
 
 ```
 catkin_install_python(PROGRAMS scripts/client.py scripts/serveur.py
