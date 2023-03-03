@@ -1,0 +1,3 @@
+La navigation consiste à déplacer le robot d'un endroit à une destination spécifiée dans un environnement donné. Pour ce faire, une carte contenant les informations géométriques des meubles, des objets et des murs de l'environnement est nécessaire. Comme décrit dans la section SLAM précédente, la carte a été créée avec les informations de distance obtenues par le capteur et les informations de pose du robot lui-même.
+La navigation permet au robot de se déplacer de la position actuelle à la position cible désignée sur la carte en utilisant la carte, l'encodeur du robot, le capteur inertiel et le capteur de distance. La procédure d'exécution de cette tâche est la suivante.
+
