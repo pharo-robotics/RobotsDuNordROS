@@ -38,18 +38,6 @@ RNROSCourse class >> courseDay4 [
 ]
 
 { #category : #'as yet unclassified' }
-RNROSCourse class >> courseDay5 [
-
-	^ RNROSDay5 new course
-]
-
-{ #category : #'as yet unclassified' }
-RNROSCourse class >> courseDay6 [
-
-	^ RNROSDay6 new course
-]
-
-{ #category : #'as yet unclassified' }
 RNROSCourse class >> courses [
 
 	^ { 
@@ -59,8 +47,6 @@ RNROSCourse class >> courses [
 		  (#'Jour 3: TP Slam, Services & Localisation'
 		   -> [ self courseDay3 ]).
 		  (#'Jour 4: TP Localisation, Actions & Navigation'
-		   -> [ self courseDay4 ]).
-		  (#'Jour 5: TP Navigation' -> [ self courseDay5 ]).
-		  (#'Jour 6: TP Exploration' -> [ self courseDay6 ]) }
+		   -> [ self courseDay4 ]) }
 		  asOrderedDictionary
 ]
